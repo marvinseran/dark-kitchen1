@@ -5,6 +5,10 @@
 @import './vendors/reset';
 @import './utils/variables';
 @import './utils/mixins';
-@import './base/base.scss';
+@import './base/base';
 @import './header/navbar';
-@import './header/bas_header'
+@import './header/bas_header';
+@import './components/buttons';
+@import './components/card';
+
+

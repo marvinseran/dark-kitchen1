@@ -1,0 +1,66 @@
+.boxarticle {
+    width: 100%;
+}
+
+.box1,
+.box2 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    font-family: 'Barlow', sans-serif;
+
+    @include media-maxwidth ($mobile) {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+}
+.card {
+    width: 100%;
+    border-radius: 20px;
+    margin: 0.6%;
+    overflow: auto;
+    box-shadow: 5px 3px 3px grey;
+    background-color: white;
+    transition: transform .2s;
+
+    @include media-maxwidth ($mobile) {
+        width: auto;
+        height: auto;
+        margin: 2%;
+    }
+
+    &__name {
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+
+    }
+
+    &__genre {
+        text-align: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-weight: 300;
+        font-size: 10px;
+    }
+
+    &__img {
+        width: 100%;
+        height: 43%;
+    }
+
+    &__desc {
+        font-size: 15px;
+        text-align: justify;
+        margin-top: 5%;
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
