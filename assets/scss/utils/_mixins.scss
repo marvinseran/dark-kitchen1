@@ -20,5 +20,10 @@ $desktop: 1400px;
         @content;
     }
 }
+@mixin media-minwidth($screensize) {
+    @media (min-width:$screensize) {
+        @content;
+    }
+}
 
 
