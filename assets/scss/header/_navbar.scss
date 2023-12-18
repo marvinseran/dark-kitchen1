@@ -15,8 +15,9 @@
   .adress {
     text-transform: uppercase;
     font-size: 10px;
-    @include media-minwidth($mobile){
-      font-size: 15px;
+     display:none;
+    @include media-minwidth($tablet){
+     display:block
     }
   }
  
@@ -29,13 +30,13 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding: 14px;
     text-decoration: none;
-    @include media-minwidth($mobile){
+    @include media-minwidth($tablet){
       font-size: 20px;
     }
   }}
   .logo{
-    width:100%;
-    @include media-minwidth($mobile){
+    width:60%;
+    @include media-minwidth($tablet){
       width:40%;
     }
   }
