@@ -140,3 +140,22 @@ function togglePopup() {
     let popup = document.querySelector(".popup");
     popup.classList.toggle("open");
 }
+
+// ------------dark mode--------
+
+document.addEventListener('DOMContentLoaded', function() {
+    const darkModeToggle = document.getElementById('darkmode-toggle');
+    const navbar = document.querySelector('.navbar');
+
+    // Function to toggle navbar color
+    function toggleNavbarColor() {
+        if (darkModeToggle.checked) {
+            navbar.classList.add('dark-navbar'); // Add class when checked
+        } else {
+            navbar.classList.remove('dark-navbar'); // Remove class when unchecked
+        }
+    }
+
+    // Event listener for checkbox change
+    darkModeToggle.addEventListener('change', toggleNavbarColor);
+});
