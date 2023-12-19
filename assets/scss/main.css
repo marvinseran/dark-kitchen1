@@ -68,9 +68,6 @@ table {
   width: 40px;
   transition: transform 0.2s;
 }
-.navbar__cart:hover {
-  transform: scale(1.2);
-}
 .navbar .adress {
   text-transform: uppercase;
   font-size: 20px;
@@ -104,6 +101,15 @@ table {
   .logo {
     width: 40%;
   }
+}
+
+#cart-button {
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+}
+#cart-button:hover {
+  transform: scale(1.2);
 }
 
 .popup {
@@ -170,6 +176,10 @@ table {
   border-radius: 5px;
   top: -10px;
   right: -10px;
+}
+
+.popup.open {
+  display: block;
 }
 
 /* --------button darkmode--------- */

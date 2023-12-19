@@ -133,8 +133,10 @@ collection.forEach(function(object, index) {
 });
 
 
-// ---------------------------------------------------
+// ------------------PANIER---------------------------------
 
+function togglePopup() {
+    let popup = document.querySelector(".popup");
+    popup.classList.toggle("open");
 
-
-
+}

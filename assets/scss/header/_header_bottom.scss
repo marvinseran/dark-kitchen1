@@ -25,7 +25,7 @@
     z-index: 3;
     display: flex;
     justify-content: center;
-    display:none;
+    display: none;
 
     &__content {
         max-width: 600px;
@@ -46,8 +46,9 @@
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         transition: transform .2s;
         font-size: 20px;
+
         h1 {
-            padding:30px;
+            padding: 30px;
         }
 
         &--button {
@@ -61,25 +62,32 @@
             display: inline-block;
             font-size: 16px;
             border-radius: 10px;
+
             &:hover {
-              transform:scale(1.2);
+                transform: scale(1.2);
             }
-            &:active { 
-               background-color: black;
+
+            &:active {
+                background-color: black;
             }
         }
+
         &--exit {
-            position:absolute;
-            top:0;
+            position: absolute;
+            top: 0;
             right: 0;
             text-decoration: none;
-            padding:5px 10px;
+            padding: 5px 10px;
             background-color: black;
-            color:white;
-            border-radius:5px;
-            top:-10px;
-            right:-10px;
+            color: white;
+            border-radius: 5px;
+            top: -10px;
+            right: -10px;
         }
 
     }
+}
+
+.popup.open {
+    display: block;
 }

@@ -8,27 +8,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dark kitchen</title>
-    <link rel="stylesheet" href="scss/main.css">
 </head>
 
 <body>
     <section class="navbar">
         <a href="#logo"><img src="img/logo.png" class="logo" alt="Logo qui montre un scooter"> </a>
-        <a class="adress" href="#adress">Coliseum</a>
-        <a href="#caddy"><img src="../assets/img/cart-icon.png" class="navbar__cart"></a>
+        <a class="adress" href="#adress">Cosa Nostra</a>
+        <button onclick="togglePopup()" id="cart-button"><img src="../assets/img/cart-icon.png" class="navbar__cart"></button>
         <input type="checkbox" id="darkmode-toggle" />
         <label for="darkmode-toggle">
             <!-- <svg version="1.1" class="sun" ...></svg> -->
             <!-- <svg version="1.1" class="moon" ...></svg> -->
         </label>
-        </a>
     </section>
     <header>
         <div class="popup">
             <div class="popup__content">
                 <h1>Articles dans votre panier:</h1>
                 <a class="popup__content--button" href="#">Payez</a>
-                <a class="popup__content--exit" href="javscript:void(0)">Fermer</a>
+                <a class="popup__content--exit" onclick="togglePopup()" href="javscript:void(0)">Fermer</a>
             </div>
         </div>
 
