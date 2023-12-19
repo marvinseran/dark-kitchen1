@@ -69,16 +69,26 @@
         margin-top: 2%;
     }
     &__button{
+        cursor: pointer;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 500;
+        font-size: 18px;
         background-color: #d99c21;
         color: white;
         width: 100%;
         height: 100%;
         margin-top: 4%;
         border: none;
-        border-radius: 12px;
         padding: 10px 10px;
         display: flex;
         justify-content: center;
+        transition: 0.2s;
+    }
+    &__button:hover{
+        background-color: #a17212;
+    }
+    &__button:active{
+        background-color: green;
     }
 }
 
