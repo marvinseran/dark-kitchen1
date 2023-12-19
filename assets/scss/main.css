@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -97,8 +98,18 @@ table {
   }
 }
 
-.header_bottom {
-  background-image: url("../../img/fond_header.png");
+.header__bottom {
+  margin-top: 15px;
+  background-position: cover;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(335deg, rgb(2, 0, 36) 0%, rgb(121, 71, 9) 25%, rgb(227, 125, 8) 46%, rgb(228, 188, 145) 100%);
+  text-align: end; /* Pour centrer l'image à l'intérieur de la div */
+}
+.header__bottom__img {
+  width: 40%; /* Vous pouvez ajuster la largeur selon vos besoins */
+  /* Si nécessaire, ajoutez d'autres styles spécifiques à l'image ici */
 }
 
 /* --------button darkmode--------- */
