@@ -135,6 +135,6 @@ collection.forEach(function(object, index) {
 
 // ---------------------------------------------------
 
-function panier (price) {
+//function panier (price) {
 
-}
+//}
