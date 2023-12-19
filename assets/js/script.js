@@ -142,20 +142,30 @@ function togglePopup() {
 }
 
 // ------------dark mode--------
-
 document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('darkmode-toggle');
     const navbar = document.querySelector('.navbar');
+    const main = document.querySelector('main');
+    const footer = document.querySelector('.footer');
 
-    // Function to toggle navbar color
-    function toggleNavbarColor() {
-        if (darkModeToggle.checked) {
-            navbar.classList.add('dark-navbar'); // Add class when checked
-        } else {
-            navbar.classList.remove('dark-navbar'); // Remove class when unchecked
-        }
+    function toggleDarkMode() {
+        navbar.classList.toggle('dark-navbar');
+        main.classList.toggle('dark-mode');
+        footer.classList.toggle('dark-footer');
+
+        // Get all card elements
+        const cardElements = document.querySelectorAll('.card');
+
+        cardElements.forEach(card => {
+            card.classList.toggle('dark-card'); // Toggle the dark mode class for cards
+
+            const cardTexts = card.querySelectorAll('.card__genre, .card__name, .card__desc');
+
+            cardTexts.forEach(textElement => {
+                textElement.classList.toggle('dark-mode-text'); // Toggle class for card texts
+            });
+        });
     }
 
-    // Event listener for checkbox change
-    darkModeToggle.addEventListener('change', toggleNavbarColor);
+    darkModeToggle.addEventListener('change', toggleDarkMode);
 });

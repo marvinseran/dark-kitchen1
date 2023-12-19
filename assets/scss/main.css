@@ -238,15 +238,6 @@ label:active:after {
   width: 26px;
 }
 
-.background {
-  width: 100vw;
-  height: 100vh;
-  background: #fff;
-  z-index: -1;
-  position: absolute;
-  transition: 0.3s;
-}
-
 input:checked + label + .background {
   background: #242424;
 }
@@ -484,7 +475,23 @@ footer {
 }
 
 .dark-navbar {
-  background-color: black;
-  color: white;
-  /* Add other styles for dark mode navbar */
+  background-color: black; /* Dark mode background for navbar */
+  color: white; /* Text color for the dark mode navbar */
+}
+
+.dark-mode {
+  background-color: black; /* Dark mode background for main */
+  color: white; /* Text color for the dark mode main */
+}
+
+.dark-card {
+  background-color: black; /* Dark mode background for cards */
+}
+
+.dark-mode-text {
+  color: white; /* Text color for dark mode texts in cards */
+}
+
+.dark-footer {
+  background-color: black; /* Dark mode background for footer */
 }/*# sourceMappingURL=main.css.map */

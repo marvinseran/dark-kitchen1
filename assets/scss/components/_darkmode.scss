@@ -1,5 +1,23 @@
 .dark-navbar {
-    background-color: black; 
-    color: white; 
-    /* Add other styles for dark mode navbar */
-  }
+  background-color: black; /* Dark mode background for navbar */
+  color: white; /* Text color for the dark mode navbar */
+}
+
+.dark-mode {
+  background-color: black; /* Dark mode background for main */
+  color: white; /* Text color for the dark mode main */
+}
+
+.dark-card {
+  background-color: black; /* Dark mode background for cards */
+}
+
+.dark-mode-text {
+  color: white; /* Text color for dark mode texts in cards */
+}
+
+.dark-footer {
+  background-color: black; /* Dark mode background for footer */
+  // color: white;  
+  // Text color for the dark mode footer 
+}
