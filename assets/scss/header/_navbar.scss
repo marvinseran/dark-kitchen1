@@ -13,6 +13,11 @@
     z-index: 3;
 &__cart {
   width:40px;
+  transition: transform .2s;
+  &:hover {
+    transform:scale(1.2);
+  }
+
   
 }
 

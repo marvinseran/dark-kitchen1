@@ -66,6 +66,10 @@ table {
 }
 .navbar__cart {
   width: 40px;
+  transition: transform 0.2s;
+}
+.navbar__cart:hover {
+  transform: scale(1.2);
 }
 .navbar .adress {
   text-transform: uppercase;
