@@ -75,6 +75,11 @@ table {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 14px;
   text-decoration: none;
+}
+
+.header_bottom {
+  background-image: url("../../img/fond_header.png");
+}
 
 /* --------button darkmode--------- */
 label {
@@ -135,6 +140,26 @@ input:checked + label + .background {
   background: #242424;
 }
 
+.boxarticle {
+  width: 100%;
+}
+
+.box1,
+.box2 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  font-family: "Barlow", sans-serif;
+}
+@media (max-width: 375px) {
+  .box1,
+  .box2 {
+    flex-direction: column;
+    max-width: 100%;
+  }
+}
+
 .card {
   width: 100%;
   border-radius: 20px;
@@ -166,7 +191,7 @@ input:checked + label + .background {
 }
 .card__img {
   width: 100%;
-  height: 43%;
+  height: 50%;
 }
 .card__desc {
   font-size: 15px;
@@ -174,5 +199,8 @@ input:checked + label + .background {
   margin-top: 5%;
   margin-left: 3%;
   margin-right: 3%;
->>>>>>> marvin
+}
+
+.card:hover {
+  transform: scale(1.02);
 }/*# sourceMappingURL=main.css.map */
