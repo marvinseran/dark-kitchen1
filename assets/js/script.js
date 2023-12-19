@@ -122,6 +122,8 @@ collection.forEach(function(object, index) {
 
     createCard(section, 'div', 'card__desc', object.desc)
 
+    createCard(section, 'button', 'card__button', "Add cart")
+
 
     
     if (index % 2 === 0){
