@@ -7,6 +7,11 @@
 
 $mobile: 375px;
 $desktop: 1400px;
+$tablet : 670px;
+@mixin media-minMaxWidth($min-width, $max-width) {
+    @media (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+    }}
 
 
 @mixin media-maxwidth($screensize) {
@@ -15,6 +20,11 @@ $desktop: 1400px;
     }
 }
 
+@mixin media-minwidth($screensize) {
+    @media (min-width:$screensize) {
+        @content;
+    }
+}
 @mixin media-minwidth($screensize) {
     @media (min-width:$screensize) {
         @content;
