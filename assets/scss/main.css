@@ -404,4 +404,10 @@ footer {
 
 .footer_content_icons {
   filter: invert(47%) sepia(93%) saturate(6318%) hue-rotate(270deg) brightness(63%) contrast(124%);
+}
+
+.dark-navbar {
+  background-color: black;
+  color: white;
+  /* Add other styles for dark mode navbar */
 }/*# sourceMappingURL=main.css.map */
