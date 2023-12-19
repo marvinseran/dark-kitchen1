@@ -5,7 +5,7 @@ const collection = [
         name: "Pizza 4 Fromages",
         img: "img/pqf.jpg",
         genre: ["Pizza"],
-        desc: "La pizza ai quattro formaggi est une variété de pizza de la cuisine italienne garnie d'une combinaison de quatre sortes de fromages, généralement fondus ensemble, avec ou sans sauce tomate.",
+        desc: "La pizza ai quattro formaggi est garnie d'une combinaison de quatre sortes de fromages, généralement fondus ensemble, avec ou sans sauce tomate.",
     },
     {
         priceShow : "12 €",
@@ -42,7 +42,7 @@ const collection = [
     {
         priceShow : "14 €",
         price: 14,
-        name: "Lasagne à la Bolognaise",
+        name: "Lasagne Bolognaise",
         img: "img/lsbol.jpg",
         genre: ["Spécialité de la maison"],
         desc: "Fines feuilles de pâtes avec une sauce bolognaise à base de viande hachée, de tomates, d'oignons, d'ail, de béchamel et de fromage.",
@@ -58,7 +58,7 @@ const collection = [
     {
         priceShow : "14 €",
         price: 14,
-        name: "Canneloni à la Bolognaise",
+        name: "Canneloni Bolognaise",
         img: "img/canbol.jpg",
         genre: ["Spécialité de la maison"],
         desc: "Des tubes de pâtes remplis d'une délicieuse farce à la viande, souvent préparée avec une sauce bolognaise, du fromage ricotta ou béchamel.",
@@ -122,7 +122,7 @@ collection.forEach(function(object, index) {
 
     createCard(section, 'div', 'card__desc', object.desc)
 
-    createCard(section, 'button', 'card__button', "Add cart")
+    createCard(section, 'button', 'card__button', "Ajouter à la commande")
 
 
     

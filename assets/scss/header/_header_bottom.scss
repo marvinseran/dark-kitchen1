@@ -67,6 +67,15 @@
                background-color: black;
             }
         }
+        &--exit {
+            position:absolute;
+            top:0;
+            right: 0;
+            text-decoration: none;
+            padding:5;
+            background-color: black;
+            border-radius:5px;
+        }
 
     }
 }
