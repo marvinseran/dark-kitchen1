@@ -140,25 +140,25 @@ function togglePopup() {
     let popup = document.querySelector(".popup");
     popup.classList.toggle("open");
 }
-let cardButton = document.getElementsByClassName("card__button")
-let panier = []
+// let cardButton = document.getElementsByClassName("card__button")
+// let panier = []
 
-cardButton.addEventListener("click", addCart()) ;
+// cardButton.addEventListener("click", addCart()) ;
   
 
-function addCart() {
+// function addCart() {
 
-    let paragraph = document.createElement("p");
-    paragraph.textContent = collection.priceShow;
+//     let paragraph = document.createElement("p");
+//     paragraph.textContent = collection.priceShow;
 
-    let h1 = document.querySelector(".popup__content.children");
+//     let h1 = document.querySelector(".popup__content.children");
 
-    // Ajoutez le paragraphe à la section
-    h1.appendChild(paragraph);
+//     // Ajoutez le paragraphe à la section
+//     h1.appendChild(paragraph);
 
-    // Ajoutez le prix au panier (si nécessaire)
-    panier.push(priceShow);
-}
+//     // Ajoutez le prix au panier (si nécessaire)
+//     panier.push(priceShow);
+// }
 // ------------dark mode--------
 document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('darkmode-toggle');
