@@ -13,7 +13,7 @@ const collection = [
         name: "Pizza Jambon",
         img: "img/pj.jpg",
         genre: ["Pizza"],
-        desc: "C'est un classique des menus des pizzerias, sur une base jambon-fromage-champignons. L'origine de cette pizza remonterait à Naples et au pizzaiolo Raffaele Esposito.",
+        desc: "C'est un classique des menus des pizzerias, sur une base jambon-fromage-champignons.",
     },
     {
         priceShow : "8 €",
@@ -37,7 +37,7 @@ const collection = [
         name: "Pizza Napolitaine",
         img: "img/pnap.jpg",
         genre: ["Pizza", "Vegan"],
-        desc: "Une délicieuse pizza à croûte fine, garnie de tomates San Marzano, de mozzarella de bufflonne, d'huile d'olive, de basilic frais et cuite à haute température pour une saveur authentique.",
+        desc: "Une délicieuse pizza à croûte fine, garnie de tomates San Marzano, de mozzarella de bufflonne, d'huile d'olive, de basilic frais.",
     },    
     {
         priceShow : "14 €",
@@ -45,7 +45,7 @@ const collection = [
         name: "Lasagne à la Bolognaise",
         img: "img/lsbol.jpg",
         genre: ["Spécialité de la maison"],
-        desc: "Fines feuilles de pâtes superposées, alternant avec une sauce bolognaise généreuse à base de viande hachée, de tomates, d'oignons, d'ail, de béchamel et de fromage, le tout gratiné au four pour une texture onctueuse et savoureuse.",
+        desc: "Fines feuilles de pâtes avec une sauce bolognaise à base de viande hachée, de tomates, d'oignons, d'ail, de béchamel et de fromage.",
     },    
     {
         priceShow : "15 €",
@@ -53,7 +53,7 @@ const collection = [
         name: "Veau à l'italienne",
         img: "img/vit.webp",
         genre: ["Spécialité de la maison"],
-        desc: "Un plat mettant en valeur des morceaux de veau tendres, souvent préparés avec une combinaison d'ingrédients italiens tels que des tomates, des herbes aromatiques, de l'ail, parfois du vin blanc ou du vinaigre balsamique, créant ainsi une cuisine savoureuse et parfumée typique de l'Italie.",
+        desc: "Un plat mettant en valeur des morceaux de veau tendres, des tomates, des herbes aromatiques et de l'ail.",
     },    
     {
         priceShow : "14 €",
@@ -61,7 +61,7 @@ const collection = [
         name: "Canneloni à la Bolognaise",
         img: "img/canbol.jpg",
         genre: ["Spécialité de la maison"],
-        desc: "Des tubes de pâtes remplis d'une délicieuse farce à la viande, souvent préparée avec une sauce bolognaise, du fromage ricotta ou béchamel, le tout cuit au four pour obtenir des rouleaux de pâtes gratinés et savoureux.",
+        desc: "Des tubes de pâtes remplis d'une délicieuse farce à la viande, souvent préparée avec une sauce bolognaise, du fromage ricotta ou béchamel.",
     },    
     {
         priceShow : "15 €",
@@ -69,7 +69,7 @@ const collection = [
         name: "Arancini",
         img: "img/acini.jpg",
         genre: ["Entrée"],
-        desc: "Des boules de riz cuites, généralement farcies avec du risotto, de la viande hachée, des petits pois, de la mozzarella, puis panées et frites. Ce plat italien est apprécié pour sa texture croustillante à l'extérieur et son cœur moelleux et savoureux.",
+        desc: "Des boules de riz cuites, généralement farcies avec du risotto, de la viande hachée, des petits pois, de la mozzarella, puis panées et frites.",
     },    
     {
         priceShow : "12 €",
@@ -77,7 +77,7 @@ const collection = [
         name: "Pizza aux champignons",
         img: "img/pcha.jpg",
         genre: ["Pizza", "Vegan"],
-        desc: "Une pizza garnie d'une sauce tomate ou crème fraîche, de mozzarella fondante, et de champignons tranchés, créant une combinaison délicieuse entre la richesse des champignons et le fondant du fromage, cuite à perfection pour une expérience gustative équilibrée.",
+        desc: "Une pizza garnie d'une sauce tomate ou crème fraîche, de mozzarella fondante, et de champignons tranchés.",
     }
 ];
 

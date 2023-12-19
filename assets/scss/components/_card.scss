@@ -59,8 +59,15 @@
         margin-left: 3%;
         margin-right: 3%;
     }
+    &__priceShow {
+        font-family: 'Fraunces', serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-align: center;
+    }
 }
 
 .card:hover {
     transform: scale(1.02);
 }
+ 
