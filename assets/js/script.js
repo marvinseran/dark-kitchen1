@@ -38,7 +38,7 @@ const collection = [
         desc: "Un plat mettant en valeur des morceaux de veau tendres, souvent préparés avec une combinaison d'ingrédients italiens tels que des tomates, des herbes aromatiques, de l'ail, parfois du vin blanc ou du vinaigre balsamique, créant ainsi une cuisine savoureuse et parfumée typique de l'Italie.",
     },    {
         name: "Canneloni à la Bolognaise",
-        img: "assets/canbol.jpg"
+        img: "assets/canbol.jpg",
         genre: ["Spécialité de la maison"],
         desc: "Des tubes de pâtes remplis d'une délicieuse farce à la viande, souvent préparée avec une sauce bolognaise, du fromage ricotta ou béchamel, le tout cuit au four pour obtenir des rouleaux de pâtes gratinés et savoureux.",
     },    {
