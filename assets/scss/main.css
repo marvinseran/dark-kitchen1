@@ -291,15 +291,17 @@ input:checked + label + .background {
 .card__desc {
   font-size: 15px;
   text-align: justify;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-left: 3%;
   margin-right: 3%;
 }
 .card__priceShow {
   font-family: "Fraunces", serif;
+  color: #d99c21;
   font-weight: 700;
   font-size: 20px;
   text-align: center;
+  margin-top: 2%;
 }
 
 .card:hover {

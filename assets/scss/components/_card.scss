@@ -55,15 +55,17 @@
     &__desc {
         font-size: 15px;
         text-align: justify;
-        margin-top: 5%;
+        margin-top: 2%;
         margin-left: 3%;
         margin-right: 3%;
     }
     &__priceShow {
         font-family: 'Fraunces', serif;
+        color : #d99c21;
         font-weight: 700;
         font-size: 20px;
         text-align: center;
+        margin-top: 2%;
     }
 }
 
