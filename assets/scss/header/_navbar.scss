@@ -1,6 +1,7 @@
 
 
 .navbar {
+  padding: 10px;
     overflow: hidden;
     background-color: #d99c21;
     display:flex;
@@ -9,8 +10,10 @@
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 3;
 &__cart {
-  width:50px;
+  width:40px;
+  
 }
 
 
