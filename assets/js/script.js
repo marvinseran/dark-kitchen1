@@ -117,10 +117,12 @@ collection.forEach(function(object, index) {
     createCard(section, 'div', 'card__genre', object.genre.join(', '))
     
     createCard(section, 'div', 'card__name', object.name)
+    
+    createCard(section, 'div', 'card__priceShow', object.priceShow)
 
     createCard(section, 'div', 'card__desc', object.desc)
 
-    createCard(section, 'div', 'card__priceShow', object.priceShow)
+
     
     if (index % 2 === 0){
         section1.appendChild(section);
