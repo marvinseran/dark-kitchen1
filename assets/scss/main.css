@@ -429,11 +429,13 @@ footer {
   list-style: none;
   font-family: Georgia, sans-serif;
 }
-footer__content {
+
+.footer__content {
   margin-bottom: 10px;
   padding-top: 25px;
 }
-footer__content__title {
+
+.footer__content__title {
   margin-bottom: 12px;
   padding-top: 12px;
   font-size: 18px;
@@ -507,7 +509,7 @@ footer__content__title {
 
 .dark-card {
   background-color: #1a1a1a;
-  box-shadow: 5px 3px 3px rgb(0, 0, 0);
+  box-shadow: 5px 3px 3px rgb(19, 76, 6);
 }
 
 .dark-mode-button {
