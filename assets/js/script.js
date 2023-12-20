@@ -124,54 +124,70 @@ collection.forEach(function(object, index) {
 
     createCard(section, 'button', 'card__button', "Ajouter à la commande")
 
-
+    section1.appendChild(section);
     
-    if (index % 2 === 0){
-        section1.appendChild(section);
+    // if (index % 2 === 0){
+    //     section1.appendChild(section);
  
-    }
-    else {
-        section2.appendChild(section);
+    // }
+    // else {
+    //     section2.appendChild(section);
 
-    }
+    // }
 });
 // -------------------Panier---------------------
 function togglePopup() {
     let popup = document.querySelector(".popup");
     popup.classList.toggle("open");
 }
-// let cardButton = document.getElementsByClassName("card__button")
-// let panier = []
 
-// cardButton.addEventListener("click", addCart()) ;
-  
+let panier = []; 
 
-// function addCart() {
+let cartButton = document.querySelector("#cart-button");
+let cardButtons = document.querySelectorAll(".card__button");
 
-//     let paragraph = document.createElement("p");
-//     paragraph.textContent = panier;
+cardButtons.forEach(function(cardButton, index) {
+    cardButton.addEventListener("click", function() {
+        addCart(collection[index]); 
+        openCart();
+    });
+});
 
-//     let popup = document.querySelector(".popup__content");
+function addCart(item) {
+    panier.push({ name: item.name, priceShow: item.priceShow });
+}
 
-//     popup.appendChild(paragraph);
-
-//     panier.push(collection.priceShow);
-// }
+function openCart() {
+    let cart = panier.map(item => `${item.name} - ${item.priceShow}`).join(', ');
+    let popup = document.querySelector(".contentCart");
+    popup.textContent = `${cart}`;
+}
 // ------------dark mode--------
 
 document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('darkmode-toggle');
     const navbar = document.querySelector('.navbar');
+    const main = document.querySelector('main');
+    const footer = document.querySelector('.footer');
 
-    // Function to toggle navbar color
-    function toggleNavbarColor() {
-        if (darkModeToggle.checked) {
-            navbar.classList.add('dark-navbar'); // Add class when checked
-        } else {
-            navbar.classList.remove('dark-navbar'); // Remove class when unchecked
-        }
+    function toggleDarkMode() {
+        navbar.classList.toggle('dark-navbar');
+        main.classList.toggle('dark-mode');
+        footer.classList.toggle('dark-footer');
+
+        // Get all card elements
+        const cardElements = document.querySelectorAll('.card');
+
+        cardElements.forEach(card => {
+            card.classList.toggle('dark-card'); // Toggle the dark mode class for cards
+
+            const cardTexts = card.querySelectorAll('.card__genre, .card__name, .card__desc');
+
+            cardTexts.forEach(textElement => {
+                textElement.classList.toggle('dark-mode-text'); // Toggle class for card texts
+            });
+        });
     }
 
-    // Event listener for checkbox change
-    darkModeToggle.addEventListener('change', toggleNavbarColor);
+    darkModeToggle.addEventListener('change', toggleDarkMode);
 });
