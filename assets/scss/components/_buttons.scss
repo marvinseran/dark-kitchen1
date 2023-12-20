@@ -32,22 +32,30 @@ label {
     input:checked + label {
     background: #242424;
     }
+
     input:checked + label:after {
-    left:35px;
-    transform: translateX(-100%);
-    background: linear-gradient(180deg,#777,#3a3a3a);
-    @include media-minwidth($mobile){
-        left:49px;
+      left: 45px;
+      transform: translateX(-100%);
+      background: linear-gradient(180deg, #777, #3a3a3a);
+  }
+  
+  @media (max-width: 433px) {
+      input:checked + label:after {
+          left:35px;
       }
-      @include media-minMaxWidth($mobile , $tablet){ 
-        left:45px;
-    }
-    }
+  }
   
     label:active:after{
-    width: 26px;
-    }
+    width: 48px;
+  }
+     @media (max-width: 433px) {
+      label:active:after {
+          width:30px;
+      }
+  }
+    
    
+
     input:checked + label + .background {
     background:#242424;
     }
