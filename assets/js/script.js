@@ -223,12 +223,6 @@ document.addEventListener('DOMContentLoaded', function() {
             if (cardButton) {
                 cardButton.classList.toggle('dark-mode-button'); 
             }
-
-            const cardButton = card.querySelector('.card__button');
-
-            if (cardButton) {
-                cardButton.classList.toggle('dark-mode-button'); 
-            }
         });
     }
 
