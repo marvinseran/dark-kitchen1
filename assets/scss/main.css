@@ -178,6 +178,12 @@ table {
   border-radius: 10px;
   margin-top: 10px;
 }
+.popup__content__button--reset:hover {
+  transform: scale(1.2);
+}
+.popup__content__button--reset:active {
+  background-color: black;
+}
 .popup__content__button--pay {
   width: 100px;
   background-color: #04AA6D;

@@ -62,6 +62,13 @@
             font-size: 16px;
             border-radius: 10px;
             margin-top: 10px;
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            &:active {
+                background-color: black;
+            }
         }
 
        

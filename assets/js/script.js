@@ -175,7 +175,7 @@ function openCart() {
 
 function resetCart() {
     panier = [];
-    openCart(); // Met à jour l'affichage du panier après la réinitialisation
+    openCart(); 
 }
 
 function calculateTotal() {
