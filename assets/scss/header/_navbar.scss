@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 .navbar {
   padding: 10px;
   overflow: hidden;
-  background-color: #d99c21;
+  background: linear-gradient(to right, #ffcc00, #d99c21);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -13,6 +15,7 @@
   &__cart {
     width: 40px;
     transition: transform .2s;
+    
 
 
 
@@ -21,13 +24,34 @@
 
   .adress {
     text-transform: uppercase;
-    font-size: 20px;
+    font-family: 'Pacifico';
+    font-size: 42px;
     display: none;
+    padding-right: 0px;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+
+  
 
     @include media-minwidth($tablet) {
       display: block
     }
   }
+  
+  .adress2 {
+    font-family: Georgia, 'Times New Roman', Times, serif,Arial, sans-serif, sans-serif;
+    font-size: 14px;
+    display: none;
+    padding-left: 0px;
+    padding-right: 100px;
+    padding-top: 40px;;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+  
+
+    @include media-minwidth($tablet) {
+      display: block
+    }
+  }
+  
 
   & a {
     float: left;

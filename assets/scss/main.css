@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -55,7 +56,7 @@ table {
 .navbar {
   padding: 10px;
   overflow: hidden;
-  background-color: #d99c21;
+  background: linear-gradient(to right, #ffcc00, #d99c21);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -70,11 +71,28 @@ table {
 }
 .navbar .adress {
   text-transform: uppercase;
-  font-size: 20px;
+  font-family: "Pacifico";
+  font-size: 42px;
   display: none;
+  padding-right: 0px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
 }
 @media (min-width: 670px) {
   .navbar .adress {
+    display: block;
+  }
+}
+.navbar .adress2 {
+  font-family: Georgia, "Times New Roman", Times, serif, Arial, sans-serif, sans-serif;
+  font-size: 14px;
+  display: none;
+  padding-left: 0px;
+  padding-right: 100px;
+  padding-top: 40px;
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
+}
+@media (min-width: 670px) {
+  .navbar .adress2 {
     display: block;
   }
 }
@@ -409,16 +427,29 @@ footer {
   margin: 0;
   text-decoration: none;
   list-style: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif, Helvetica, sans-serif;
 }
 
 .footer_content {
   margin-bottom: 10px;
+  padding-top: 25px;
+}
+
+.footer_content_title {
+  margin-bottom: 12px;
+  padding-top: 12px;
+  font-size: 18px;
+}
+
+.footer_content_icons {
+  filter: invert(47%) sepia(93%) saturate(6318%) hue-rotate(270deg) brightness(63%) contrast(124%);
+  padding-bottom: 10px;
 }
 
 .footer_wrapper {
   display: grid;
   grid-template-columns: repeat auto-fit, minmax 200px, auto;
+  padding-bottom: 15px;
 }
 
 @media (min-width: 376px) {
@@ -436,14 +467,8 @@ footer {
   .footer_wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
-  /* .companie{
-
-      }
-  .aide{
-
-      } */
 }
 .footer_wrapper_menu {
   margin-bottom: 10px;
@@ -451,6 +476,8 @@ footer {
 
 .footer_wrapper_menu h4 {
   font-size: 20px;
+  text-decoration: underline;
+  padding-bottom: 5px;
 }
 
 .footer_wrapper_menu li {
@@ -463,6 +490,8 @@ footer {
   font-size: 15px;
   font-weight: 400;
   transition: all 0.4s ease;
+  text-decoration: none;
+  padding-top: 7px;
 }
 
 .footer_wrapper_menu li a:hover {
@@ -470,28 +499,28 @@ footer {
   color: #fff;
 }
 
-.footer_content_icons {
-  filter: invert(47%) sepia(93%) saturate(6318%) hue-rotate(270deg) brightness(63%) contrast(124%);
-}
-
 .dark-navbar {
-  background-color: black; /* Dark mode background for navbar */
-  color: white; /* Text color for the dark mode navbar */
+  background: linear-gradient(to right, #2c0707, #000000);
+  color: #f5f5f5;
 }
 
 .dark-mode {
-  background-color: black; /* Dark mode background for main */
-  color: white; /* Text color for the dark mode main */
+  background-color: #333333;
 }
 
 .dark-card {
-  background-color: black; /* Dark mode background for cards */
+  background-color: #1a1a1a;
+}
+
+.dark-mode-button {
+  background: linear-gradient(to right, #808080, #464646);
 }
 
 .dark-mode-text {
-  color: white; /* Text color for dark mode texts in cards */
+  color: #f5f5f5;
 }
 
 .dark-footer {
-  background-color: black; /* Dark mode background for footer */
+  background: linear-gradient(to right, #2c0707, #000000);
+  color: #f5f5f5;
 }/*# sourceMappingURL=main.css.map */
