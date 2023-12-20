@@ -4,7 +4,7 @@ const collection = [
         price: 11 ,
         name: "Pizza 4 Fromages",
         img: "img/pqf.jpg",
-        genre: ["Pizza"],
+        genre: "pizza",
         desc: "La pizza ai quattro formaggi est garnie d'une combinaison de quatre sortes de fromages, généralement fondus ensemble, avec ou sans sauce tomate.",
     },
     {
@@ -12,7 +12,7 @@ const collection = [
         price: 12,
         name: "Pizza Jambon",
         img: "img/pj.jpg",
-        genre: ["Pizza"],
+        genre: "pizza",
         desc: "C'est un classique des menus des pizzerias, sur une base jambon-fromage-champignons.",
     },
     {
@@ -20,7 +20,7 @@ const collection = [
         price: 8,
         name: "Pâtes Bolognaise",
         img: "img/ptbolo.jpg",
-        genre: ["Pâtes"],
+        genre: "pates",
         desc: "Pâtes al dente accompagnées d'une sauce à la viande mijotée avec tomates, oignons et herbes.",
     },    
     {
@@ -28,7 +28,7 @@ const collection = [
         price: 8,
         name: "Pâtes Carbonara",
         img: "img/ptcar.jpg",
-        genre: ["Pâtes"],
+        genre: "pates",
         desc: "Pâtes cuites avec une sauce crémeuse à base de pancetta, d'œufs, de fromage pecorino et de poivre noir.",
     },    
     {
@@ -36,7 +36,7 @@ const collection = [
         price: 11,
         name: "Pizza Napolitaine",
         img: "img/pnap.jpg",
-        genre: ["Pizza", "Vegan"],
+        genre: "pizza",
         desc: "Une délicieuse pizza à croûte fine, garnie de tomates San Marzano, de mozzarella de bufflonne, d'huile d'olive, de basilic frais.",
     },    
     {
@@ -44,7 +44,7 @@ const collection = [
         price: 14,
         name: "Lasagne Bolognaise",
         img: "img/lsbol.jpg",
-        genre: ["Spécialité de la maison"],
+        genre: "specialite de la maison",
         desc: "Fines feuilles de pâtes avec une sauce bolognaise à base de viande hachée, de tomates, d'oignons, d'ail, de béchamel et de fromage.",
     },    
     {
@@ -52,7 +52,7 @@ const collection = [
         price: 15,
         name: "Veau à l'italienne",
         img: "img/vit.webp",
-        genre: ["Spécialité de la maison"],
+        genre: "specialite de la maison",
         desc: "Un plat mettant en valeur des morceaux de veau tendres, des tomates, des herbes aromatiques et de l'ail.",
     },    
     {
@@ -60,7 +60,7 @@ const collection = [
         price: 14,
         name: "Canneloni Bolognaise",
         img: "img/canbol.jpg",
-        genre: ["Spécialité de la maison"],
+        genre: "specialite de la maison",
         desc: "Des tubes de pâtes remplis d'une délicieuse farce à la viande, souvent préparée avec une sauce bolognaise, du fromage ricotta ou béchamel.",
     },    
     {
@@ -68,16 +68,16 @@ const collection = [
         price: 15,
         name: "Arancini",
         img: "img/acini.jpg",
-        genre: ["Entrée"],
+        genre: "entree",
         desc: "Des boules de riz cuites, généralement farcies avec du risotto, de la viande hachée, des petits pois, de la mozzarella, puis panées et frites.",
     },    
     {
-        priceShow : "12 €",
-        price: 12,
-        name: "Pizza aux champignons",
-        img: "img/pcha.jpg",
-        genre: ["Pizza", "Vegan"],
-        desc: "Une pizza garnie d'une sauce tomate ou crème fraîche, de mozzarella fondante, et de champignons tranchés.",
+        priceShow : "7 €",
+        price: 7,
+        name: "Bruschetta",
+        img: "img/bruschetta.jpg",
+        genre: "entree",
+        desc: "La bruschetta à l'italienne est composée de tranches de pain grillé frottées à l'ail, garnies de tomates fraîches avec d'huile d'olive extra vierge.",
     }
 ];
 
@@ -107,34 +107,53 @@ function createCard (parent, elementType, className, textContent, src, alt){
 }
 
 collection.forEach(function(object, index) {
+    let section = document.createElement('section');
+    section.classList.add('card');
 
-   let section = document.createElement('section');
+    createCard(section, 'img', 'card__img', null, object.img, 'Image du plat');
+    createCard(section, 'div', 'card__genre', object.genre);
+    createCard(section, 'div', 'card__name', object.name);
+    createCard(section, 'div', 'card__priceShow', object.priceShow);
+    createCard(section, 'div', 'card__desc', object.desc);
+    createCard(section, 'button', 'card__button', "Ajouter à la commande");
 
-   section.classList.add('card')
-    
-    createCard(section, 'img', 'card__img', null, object.img, 'Image du plat')
-
-    createCard(section, 'div', 'card__genre', object.genre.join(', '))
-    
-    createCard(section, 'div', 'card__name', object.name)
-    
-    createCard(section, 'div', 'card__priceShow', object.priceShow)
-
-    createCard(section, 'div', 'card__desc', object.desc)
-
-    createCard(section, 'button', 'card__button', "Ajouter à la commande")
+    section.setAttribute('data-genre', object.genre);
 
     section1.appendChild(section);
-    
-    // if (index % 2 === 0){
-    //     section1.appendChild(section);
- 
-    // }
-    // else {
-    //     section2.appendChild(section);
-
-    // }
 });
+
+// -------------------Filtre---------------------
+
+
+const filterButtons = document.querySelectorAll('button[id^="filter"]');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', function () {
+        const selectedGenre = button.id.replace('filter', '').toLowerCase();
+        filterPlats(selectedGenre);
+    });
+});
+
+function filterPlats(genre) {
+    const allCards = document.querySelectorAll('.card');
+    
+    allCards.forEach(card => {
+        const cardGenres = card.getAttribute('data-genre');
+        
+        if (cardGenres.includes(genre) || genre === 'all') {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+const filterAllButton = document.getElementById('filterAll');
+
+filterAllButton.addEventListener('click', function () {
+    filterPlats('all');
+});
+
 // -------------------Panier---------------------
 let panier = [];
 
@@ -226,3 +245,4 @@ document.addEventListener('DOMContentLoaded', function() {
 
     darkModeToggle.addEventListener('change', toggleDarkMode);
 });
+

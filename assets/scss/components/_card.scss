@@ -1,30 +1,33 @@
 .boxarticle {
     width: 100%;
+    margin-top: -1%;
+    margin-bottom: 1%;
 }
 
-.box1,
-.box2 {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-    font-family: 'Barlow', sans-serif;
+.box1{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        justify-content: center;
 
+        
     @include media-maxwidth ($mobile) {
+        display: flex;
         flex-direction: column;
-        max-width: 100%;
     }
-
 }
+
 .card {
-    width: 100%;
+    max-width: 255px;
+    max-height: 438px;
     border-radius: 20px;
     margin: 0.6%;
     overflow: hidden;
     box-shadow: 5px 3px 3px grey;
     background-color: white;
     transition: transform .2s;
-
+    font-family: 'Barlow', sans-serif;
     @include media-maxwidth ($mobile) {
         width: auto;
         height: auto;
@@ -91,7 +94,6 @@
         background-color: green;
     }
 }
-
 .card:hover {
     transform: scale(1.02);
 }
