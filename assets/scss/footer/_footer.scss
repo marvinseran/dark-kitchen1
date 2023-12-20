@@ -10,21 +10,18 @@ footer{
     text-decoration: none;
     list-style:none;
     font-family: Georgia, sans-serif;
+}
 
-    &__content{
+.footer__content{
         margin-bottom: 10px;
-        padding-top: 25px;;
-
-        &__title{
+        padding-top: 25px;
+    }
+.footer__content__title{
             margin-bottom: 12px;
             padding-top: 12px;
-            font-size: 18px;
+            font-size: 20px;
         }
 
-   
-    }
-
-}
 
 .footer__content__icons {
     filter: invert(47%) sepia(93%) saturate(6318%) hue-rotate(270deg) brightness(63%) contrast(124%);

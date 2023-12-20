@@ -435,14 +435,16 @@ footer {
   list-style: none;
   font-family: Georgia, sans-serif;
 }
-footer__content {
+
+.footer__content {
   margin-bottom: 10px;
   padding-top: 25px;
 }
-footer__content__title {
+
+.footer__content__title {
   margin-bottom: 12px;
   padding-top: 12px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .footer__content__icons {
