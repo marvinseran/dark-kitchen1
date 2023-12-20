@@ -9,72 +9,62 @@ footer{
     margin: 0;
     text-decoration: none;
     list-style:none;
-    font-family: Georgia, 'Times New Roman', Times, serif, Helvetica, sans-serif;
+    font-family: Georgia, sans-serif;
+
+    &__content{
+        margin-bottom: 10px;
+        padding-top: 25px;;
+
+        &__title{
+            margin-bottom: 12px;
+            padding-top: 12px;
+            font-size: 18px;
+        }
+
+   
+    }
+
 }
 
-.footer_content{
-    margin-bottom: 10px;
-    padding-top: 25px;;
-}
-
-.footer_content_title{
-    margin-bottom: 12px;
-    padding-top: 12px;
-    font-size: 18px;
-}
-
-.footer_content_icons {
+.footer__content__icons {
     filter: invert(47%) sepia(93%) saturate(6318%) hue-rotate(270deg) brightness(63%) contrast(124%);
     padding-bottom: 10px;
   }
 
-.footer_wrapper{
+// -------wrapper elements----
+.footer__wrapper{
     display: grid;
     grid-template-columns: repeat (auto-fit, minmax (200px, auto));
     padding-bottom: 15px;
-}
 
-@media (min-width: 376px) {
-
-.companie{
-grid-column: 1/-1
-}
-
-.projets{
-    grid-column: 1/0
-}
-
-.aide{
-    grid-column: 1/3
-}
+    &__menu{
+        margin-bottom: 10px;
+    }
 
 }
 
 @media (min-width: 647px) {
 
-    .footer_wrapper{
+    .footer__wrapper{
         display: flex;
         flex-direction:row ;
         justify-content: space-evenly;
     }
    
 }
-.footer_wrapper_menu{
-    margin-bottom: 10px;
-}
 
-.footer_wrapper_menu h4{
+.footer__wrapper__menu h4{
     font-size: 20px;
     text-decoration: underline;
     padding-bottom: 5px;;
 }
 
-.footer_wrapper_menu li{
+.footer__wrapper__menu li{
     margin-bottom: 5px;
     
 }
 
-.footer_wrapper_menu li a {
+.footer__wrapper__menu li a {
     display: block;
     color:#d6d6d6;
     font-size: 15px;
@@ -84,8 +74,24 @@ grid-column: 1/-1
     padding-top: 7px;
 }
 
-.footer_wrapper_menu li a:hover{
+.footer__wrapper__menu li a:hover{
     transform : translateY(-3px) translateX (-5px);
     color: #fff;
 } 
+
+
+@media (min-width: 375px) {
+.companie{
+grid-column: 1/-1
+}
+.projets{
+    grid-column: 1/0
+}
+.aide{
+    grid-column: 1/3
+}
+}
+
+
+
 

@@ -15,10 +15,7 @@
   &__cart {
     width: 40px;
     transition: transform .2s;
-    
-
-
-
+ 
   }
 
 
@@ -30,28 +27,12 @@
     padding-right: 0px;
     text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
 
-  
 
     @include media-minwidth($tablet) {
       display: block
     }
   }
-  
-  .adress2 {
-    font-family: Georgia, 'Times New Roman', Times, serif,Arial, sans-serif, sans-serif;
-    font-size: 14px;
-    display: none;
-    padding-left: 0px;
-    padding-right: 100px;
-    padding-top: 40px;;
-    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.5);
-  
-
-    @include media-minwidth($tablet) {
-      display: block
-    }
-  }
-  
+ 
 
   & a {
     float: left;

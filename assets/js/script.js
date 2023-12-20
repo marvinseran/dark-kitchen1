@@ -204,14 +204,17 @@ document.addEventListener('DOMContentLoaded', function() {
         footer.classList.toggle('dark-footer');
 
         
+        
         const cardElements = document.querySelectorAll('.card');
 
         cardElements.forEach(card => {
+            card.classList.toggle('dark-card'); 
             card.classList.toggle('dark-card'); 
 
             const cardTexts = card.querySelectorAll('.card__genre, .card__name, .card__desc');
 
             cardTexts.forEach(textElement => {
+                textElement.classList.toggle('dark-mode-text'); 
                 textElement.classList.toggle('dark-mode-text'); 
             });
 
