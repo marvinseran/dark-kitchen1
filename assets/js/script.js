@@ -136,31 +136,59 @@ collection.forEach(function(object, index) {
     // }
 });
 // -------------------Panier---------------------
-function togglePopup() {
-    let popup = document.querySelector(".popup");
-    popup.classList.toggle("open");
-}
-
-let panier = []; 
+let panier = [];
 
 let cartButton = document.querySelector("#cart-button");
 let cardButtons = document.querySelectorAll(".card__button");
 
 cardButtons.forEach(function(cardButton, index) {
     cardButton.addEventListener("click", function() {
-        addCart(collection[index]); 
+        addCart(collection[index]);
         openCart();
     });
 });
 
 function addCart(item) {
-    panier.push({ name: item.name, priceShow: item.priceShow });
+    panier.push({ name: item.name, priceShow: item.priceShow, price: item.price });
 }
 
 function openCart() {
-    let cart = panier.map(item => `${item.name} - ${item.priceShow}`).join(', ');
-    let popup = document.querySelector(".contentCart");
-    popup.textContent = `${cart}`;
+    let cartContent = document.querySelector(".contentCart");
+    cartContent.innerHTML = ""; // Efface le contenu existant
+
+    let total = calculateTotal();
+
+    let header = document.createElement("h1");
+    header.textContent = "Articles dans votre panier:";
+    cartContent.appendChild(header);
+
+    panier.forEach(item => {
+        let paragraph = document.createElement("p");
+        paragraph.textContent = `${item.name} - ${item.priceShow}`;
+        cartContent.appendChild(paragraph);
+    });
+
+    let totalParagraph = document.createElement("p");
+    totalParagraph.textContent = `Total : ${total} €`;
+    cartContent.appendChild(totalParagraph);
+}
+
+function resetCart() {
+    panier = [];
+    openCart(); // Met à jour l'affichage du panier après la réinitialisation
+}
+
+function calculateTotal() {
+    let total = 0;
+    panier.forEach(item => {
+        total += item.price;
+    });
+    return total;
+}
+
+function togglePopup() {
+    let popup = document.querySelector(".popup");
+    popup.classList.toggle("open");
 }
 // ------------dark mode--------
 
