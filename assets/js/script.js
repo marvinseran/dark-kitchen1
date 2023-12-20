@@ -214,12 +214,12 @@ function togglePopup() {
 document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('darkmode-toggle');
     const navbar = document.querySelector('.navbar');
-    const main = document.querySelector('main');
+    const body = document.querySelector('body');
     const footer = document.querySelector('.footer');
 
     function toggleDarkMode() {
         navbar.classList.toggle('dark-navbar');
-        main.classList.toggle('dark-mode');
+        body.classList.toggle('dark-mode');
         footer.classList.toggle('dark-footer');
 
         
