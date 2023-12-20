@@ -149,41 +149,29 @@ function togglePopup() {
 // function addCart() {
 
 //     let paragraph = document.createElement("p");
-//     paragraph.textContent = collection.priceShow;
+//     paragraph.textContent = panier;
 
-//     let h1 = document.querySelector(".popup__content.children");
+//     let popup = document.querySelector(".popup__content");
 
-//     // Ajoutez le paragraphe à la section
-//     h1.appendChild(paragraph);
+//     popup.appendChild(paragraph);
 
-//     // Ajoutez le prix au panier (si nécessaire)
-//     panier.push(priceShow);
+//     panier.push(collection.priceShow);
 // }
 // ------------dark mode--------
+
 document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('darkmode-toggle');
     const navbar = document.querySelector('.navbar');
-    const main = document.querySelector('main');
-    const footer = document.querySelector('.footer');
 
-    function toggleDarkMode() {
-        navbar.classList.toggle('dark-navbar');
-        main.classList.toggle('dark-mode');
-        footer.classList.toggle('dark-footer');
-
-        // Get all card elements
-        const cardElements = document.querySelectorAll('.card');
-
-        cardElements.forEach(card => {
-            card.classList.toggle('dark-card'); // Toggle the dark mode class for cards
-
-            const cardTexts = card.querySelectorAll('.card__genre, .card__name, .card__desc');
-
-            cardTexts.forEach(textElement => {
-                textElement.classList.toggle('dark-mode-text'); // Toggle class for card texts
-            });
-        });
+    // Function to toggle navbar color
+    function toggleNavbarColor() {
+        if (darkModeToggle.checked) {
+            navbar.classList.add('dark-navbar'); // Add class when checked
+        } else {
+            navbar.classList.remove('dark-navbar'); // Remove class when unchecked
+        }
     }
 
-    darkModeToggle.addEventListener('change', toggleDarkMode);
+    // Event listener for checkbox change
+    darkModeToggle.addEventListener('change', toggleNavbarColor);
 });
