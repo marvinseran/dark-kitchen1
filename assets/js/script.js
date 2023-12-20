@@ -124,42 +124,74 @@ collection.forEach(function(object, index) {
 
     createCard(section, 'button', 'card__button', "Ajouter à la commande")
 
-
+    section1.appendChild(section);
     
-    if (index % 2 === 0){
-        section1.appendChild(section);
+    // if (index % 2 === 0){
+    //     section1.appendChild(section);
  
-    }
-    else {
-        section2.appendChild(section);
+    // }
+    // else {
+    //     section2.appendChild(section);
 
-    }
+    // }
 });
 // -------------------Panier---------------------
+let panier = [];
+
+let cartButton = document.querySelector("#cart-button");
+let cardButtons = document.querySelectorAll(".card__button");
+
+cardButtons.forEach(function(cardButton, index) {
+    cardButton.addEventListener("click", function() {
+        addCart(collection[index]);
+        openCart();
+    });
+});
+
+function addCart(item) {
+    panier.push({ name: item.name, priceShow: item.priceShow, price: item.price });
+}
+
+function openCart() {
+    let cartContent = document.querySelector(".contentCart");
+    cartContent.innerHTML = ""; // Efface le contenu existant
+
+    let total = calculateTotal();
+
+    let header = document.createElement("h1");
+    header.textContent = "Articles dans votre panier:";
+    cartContent.appendChild(header);
+
+    panier.forEach(item => {
+        let paragraph = document.createElement("p");
+        paragraph.textContent = `${item.name} - ${item.priceShow}`;
+        cartContent.appendChild(paragraph);
+    });
+
+    let totalParagraph = document.createElement("p");
+    totalParagraph.textContent = `Total : ${total} €`;
+    cartContent.appendChild(totalParagraph);
+}
+
+function resetCart() {
+    panier = [];
+    openCart(); // Met à jour l'affichage du panier après la réinitialisation
+}
+
+function calculateTotal() {
+    let total = 0;
+    panier.forEach(item => {
+        total += item.price;
+    });
+    return total;
+}
+
 function togglePopup() {
     let popup = document.querySelector(".popup");
     popup.classList.toggle("open");
 }
-// let cardButton = document.getElementsByClassName("card__button")
-// let panier = []
-
-// cardButton.addEventListener("click", addCart()) ;
-  
-
-// function addCart() {
-
-//     let paragraph = document.createElement("p");
-//     paragraph.textContent = collection.priceShow;
-
-//     let h1 = document.querySelector(".popup__content.children");
-
-//     // Ajoutez le paragraphe à la section
-//     h1.appendChild(paragraph);
-
-//     // Ajoutez le prix au panier (si nécessaire)
-//     panier.push(priceShow);
-// }
 // ------------dark mode--------
+
 document.addEventListener('DOMContentLoaded', function() {
     const darkModeToggle = document.getElementById('darkmode-toggle');
     const navbar = document.querySelector('.navbar');
@@ -171,17 +203,26 @@ document.addEventListener('DOMContentLoaded', function() {
         main.classList.toggle('dark-mode');
         footer.classList.toggle('dark-footer');
 
-        // Get all card elements
+        
+        
         const cardElements = document.querySelectorAll('.card');
 
         cardElements.forEach(card => {
-            card.classList.toggle('dark-card'); // Toggle the dark mode class for cards
+            card.classList.toggle('dark-card'); 
+            card.classList.toggle('dark-card'); 
 
             const cardTexts = card.querySelectorAll('.card__genre, .card__name, .card__desc');
 
             cardTexts.forEach(textElement => {
-                textElement.classList.toggle('dark-mode-text'); // Toggle class for card texts
+                textElement.classList.toggle('dark-mode-text'); 
+                textElement.classList.toggle('dark-mode-text'); 
             });
+
+            const cardButton = card.querySelector('.card__button');
+
+            if (cardButton) {
+                cardButton.classList.toggle('dark-mode-button'); 
+            }
         });
     }
 

@@ -7,13 +7,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <title>Dark kitchen</title>
 </head>
 
 <body>
     <nav class="navbar">
         <a href="#logo"><img src="img/logo.png" class="logo" alt="Logo qui montre un scooter"> </a>
-        <a class="adress" href="#adress">Cosa Nostra</a>
+        <a class="adress" href="#">Cosa Nostra</a>
+        <a class="adress2" href="#">Le meilleur de la cuisine italienne!</a>
         <button onclick="togglePopup()" id="cart-button"><img src="../assets/img/cart-icon.png"
                 class="navbar__cart"></button>
         <input type="checkbox" id="darkmode-toggle" />
@@ -26,8 +30,11 @@
         <div class="popup">
             <div class="popup__content">
                 <h1>Articles dans votre panier:</h1>
-                <a class="popup__content--button" href="#">Payez</a>
-                <a class="popup__content--exit" onclick="togglePopup()" href="javscript:void(0)">Fermer</a>
+                <div class = "contentCart"></div>
+                <a class="popup__content--exit" onclick="togglePopup()" href="#">Fermer</a>
+                <div class="popup__content__button">
+                <a class="popup__content__button--pay" href="#">Payez</a>
+                <button class="popup__content__button--reset" onclick="resetCart()">Vider</button>
             </div>
         </div>
     </header>
@@ -79,7 +86,7 @@
 
         <section class="footer_wrapper">
             <div class="footer_wrapper_menu companie">
-                <h4>Companie</h4>
+                <h4>Compagnie</h4>
                 <li><a href="#">Notre équipe</a></li>
                 <li><a href="#">Capital</a></li>
                 <li><a href="#">Sécurité</a></li>
@@ -88,7 +95,7 @@
 
             <div class="footer_wrapper_menu projets">
                 <h4>Projets</h4>
-                <li><a href="#">developement</a></li>
+                <li><a href="#">Developement</a></li>
                 <li><a href="#">Supports</a></li>
                 <li><a href="#">Vision</a></li>
             </div>
